@@ -1,5 +1,5 @@
 <template>
-  <div >
+
     <!-- <el-sub-menu index="1">
         <template #title>
           <el-icon><location /></el-icon>
@@ -41,7 +41,7 @@
       </el-menu-item>
       
         <el-sub-menu v-else 
-        :key="`${props.index}-${item.meta.id}`"
+        :key="`${props.index}-${item.meta.id}-submenu`"
         :index="`${props.index}-${item.meta.id}`">
         
           <template #title> 
@@ -56,7 +56,7 @@
         
 
       </template>
-  </div>
+
 </template>
 <script setup>
 import { defineProps } from 'vue';

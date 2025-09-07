@@ -1,11 +1,9 @@
 <template>
   <div class="common-layout">
     <el-container class="layout-container">
-      <el-aside width="240px" class="aside-wrapper">
-        <Aside />
-      </el-aside>
+      <Aside/>
       <el-container>
-        <el-header>Header</el-header>
+        <Header/>
         <el-main>
           <RouterView />
         </el-main>
@@ -15,6 +13,7 @@
 </template>
 <script setup>
   import Aside from '../components/Aside.vue'
+  import Header from '../components/navHeader.vue'
 </script>
 <style lang="less" scoped>
 .common-layout {
@@ -25,23 +24,13 @@
 .layout-container {
   height: 100%;
   width: 100%;
+  background-color: #bec1c3;
 }
 
-.aside-wrapper {
-  background-color: #545c64;
-  padding: 0;
-  margin: 0;
-}
 
-.el-header {
-  background-color: #B3C0D1;
-  color: var(--el-text-color-primary);
-  text-align: center;
-  line-height: 60px;
-}
+
 
 .el-main {
-  background-color: #E9EEF3;
   color: var(--el-text-color-primary);
   text-align: center;
   line-height: 160px;
